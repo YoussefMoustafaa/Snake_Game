@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+        }
+
+        #game-board {
+            background-color: #ccc;
+            height: 100vmin;
+            width: 100vmin;
+            display: grid;
+            grid-template-columns: repeat(21, 1fr);
+            grid-template-rows: repeat(21, 1fr);
+        }
+
+        .snake {
+            background-color: hsl(200, 100%, 50%);
+            border: .25vmin solid black;
+        }
+
+        .food {
+            background-color: hsl(50, 100%, 50%);
+            border: .25vmin solid black;            
+        }
+
+        .controls {
+            width: 100vh;
+            height: 100vw;
+            display: flex;
+            flex-direction: column;
+            background-color: blue;
+        }
+
+        button {
+            border: none;
+            border-radius: 15px;
+            /* padding: 0.01rem; */
+            font-size: 2rem;
+            font-weight: bold;
+            outline: none;
+            background-color: hsl(0, 100%, 38%);
+        }
+
+        .up {
+            padding: 0.1rem 2.5rem;
+            padding-top: 1rem;
+        }
+
+        .up-btn {
+            padding: 0.5rem;
+        }
+
+        .down {
+            padding: 0.1rem 2.5rem;
+        }
+
+        .down-btn {
+            padding: 0.5rem;
+        }
+
+        .left-btn {
+            padding: 0.2rem;
+            margin-right: 0.9rem;        
+        }
+
+        .right-btn {
+            padding: 0.2rem;
+            margin-left: 0.9rem;
+        }
+    </style>
+    <script src="game.js" defer type="module"></script>
+</head>
+<body>
+    <div id="game-board"></div>
+    <div id="controls">
+        <div class="up">
+        <button class="up-btn">↑</button>
+        </div>
+        <div class="row">
+        <button class="left-btn">←</button>
+        <button class="right-btn">→</button>
+        </div>
+        <div class="down">
+        <button class="down-btn">↓</button>
+        </div>
+    </div>
+</body>
+</html>
