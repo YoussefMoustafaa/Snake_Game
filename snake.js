@@ -28,7 +28,7 @@ export function draw(gameBoard) {
 
 export function expandSnake(amount) {
     newSegments += amount
-    snakeSpeed += 0.5
+    snakeSpeed += 0.3
     getRandomColor()
 }
 
